@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.spaceStation.demo.StuffMapper">
+<!--    <select id="selectByName" resultType="com.spaceStation.demo.obj.Stuff">-->
+<!--        SELECT sid, sname, ssex ,sloc FROM user WHERE sname = #{name}-->
+<!--    </select>-->
+    <select id="countByLoc" resultType="int">
+        SELECT COUNT(*) FROM stuff WHERE sloc = #{loc}
+    </select>
+</mapper>
